@@ -1,21 +1,6 @@
 <?php
 declare(strict_types=1);
-use App\Controllers\Public\IndexController;
+use App\Core\Route;
 
-switch ($uri) {
-    case '/':
-        $controller = new IndexController();
-        $controller->index();
-    break;  
+Route::get('/', 'Public/IndexController@index');
 
-    case '/contact':
-        $controller = new IndexController();
-        $controller->contact();
-    break;  
-
-    case '/resultat':
-        $controller = new IndexController();
-        $controller->resultat();
-    break;
-
-}
