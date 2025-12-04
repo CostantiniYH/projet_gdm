@@ -1,1 +1,1 @@
-<h1>Bienvenue sur  Gestiondes matières</h1>
+<h1>Bienvenue sur  Gestion des matières</h1>
