@@ -1,1 +1,1 @@
-<h1>Bienvenue sur  Gestion des matières</h1>
+<h1 class="contianer">Bienvenue sur  Gestion des matières ou Edu Prime</h1>
