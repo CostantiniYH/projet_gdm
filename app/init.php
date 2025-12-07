@@ -18,6 +18,8 @@ spl_autoload_register(function ($class) {
     }
 });
 
+require_once __DIR__ . '/../test_db.php';
+
 $configFile = __DIR__ . '/config/config.php';
 if (file_exists($configFile)) {
     require $configFile;

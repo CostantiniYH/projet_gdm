@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-use App\Controllers\Public\IndexController;
+use App\Controller\Public\IndexController;
 
 switch ($uri) {
     case '/':
@@ -12,10 +12,5 @@ switch ($uri) {
         $controller = new IndexController();
         $controller->contact();
     break;  
-
-    case '/resultat':
-        $controller = new IndexController();
-        $controller->resultat();
-    break;
 
 }
