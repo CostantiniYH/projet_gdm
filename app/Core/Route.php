@@ -24,7 +24,7 @@ class Route
         return new static;
     }
 
-    protected static function addRoute(string $method, string $path, $handler)
+    protected static function addRoute($method, $path, $handler)
     {
         self::$routes[] = [
             'method' => $method,

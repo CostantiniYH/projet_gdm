@@ -15,6 +15,8 @@
   </div>
 
 
-<?php require __DIR__ . '/footer.php' ?>
+<?php require_once __DIR__ . '/footer.php' ?>
+<script src=""></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" intégrité="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YwJrWVcXK/BmnVDxM+D2scQbITxI" origine croisée="anonyme"></script>
 </body>
 </html>

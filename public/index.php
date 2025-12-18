@@ -4,25 +4,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once __DIR__ . '/../app/init.php';
+require dirname(__DIR__) . '/vendor/autoload.php';
 
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->load();
 
-$base = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])), '/');
 
-if ($base !== '' && strpos($uri, $base) == 0) {
-    $uri = substr($uri, strlen($base));
-}
-
-$uri = $uri ?: '/';
-
-require_once __DIR__ . '/../routes/web.php';
-
-use App\Config\Database;
-
-$pdo = Database::connect();
-
-$router = new App\Core\Router($pdo);
-$router->run();
-
-?>
+require dirname(__DIR__) . '/app/init.php';

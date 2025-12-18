@@ -1,28 +1,19 @@
 <?php
 declare(strict_types=1);
 
-spl_autoload_register(function ($class) {
-    $prefix = 'App\\';
-    $base_dir = __DIR__ . '/';
-    $len = strlen($prefix);
+use App\Config\Database;
 
-    if (strncmp($prefix, $class, $len) !== 0) {
-        return;
-    }
+$pdo = Database::connect();
+echo "Connexion OK - ";
 
-    $relative_class = substr($class, $len);
-    $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
+$router = new App\Core\Router($pdo);
+$router->run();
 
-    if (file_exists($file)) {
-        require $file;
-    }
-});
+require dirname(__DIR__) . '/routes/web.php';
 
-require_once __DIR__ . '/../test_db.php';
+// require dirname(__DIR__) . '/test_db.php';
 
 $configFile = __DIR__ . '/config/config.php';
 if (file_exists($configFile)) {
     require $configFile;
 }
-
-?>
