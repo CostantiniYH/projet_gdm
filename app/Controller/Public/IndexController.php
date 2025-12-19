@@ -12,6 +12,7 @@ class IndexController {
 
         ob_start();
         require __DIR__ . '/../../Views/home.php';
+        require __DIR__ . '/../../Views/contact.php';
         $content = ob_get_clean();
         require __DIR__ . '/../../Views/partials/layout.php';
     }

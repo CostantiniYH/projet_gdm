@@ -12,7 +12,8 @@ $pdo = Database::connect();
 echo "Connexion OK - ";
 
 require dirname(__DIR__) . '/routes/web.php'; 
-$router = new App\Core\Router($pdo);
+
+$router = new Core\Router($pdo);
 $router->run();
 
 

@@ -10,4 +10,7 @@
     <p>Pour atteindre cette page en local avec : <code>php -S localhost:3000</code>, il faut vous positionner dans 
     le répertoire de l'<code>index.php</code> qui est d'ailleurs la seule entrée dans un design pattern MVC, avec la commande : <code>cd public</code> </p>
 </div>
+<br>
+<br>
+<hr>
     
