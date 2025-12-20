@@ -1,38 +1,31 @@
 <?php
 namespace App\Config;
 
-if (!defined('BASE_URL')) {
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
-    $host = $_SERVER['HTTP_HOST'];
-    
-    if ($host === 'localhost' || $host === '127.0.0.1') {
-        define('BASE_URL', $protocol . '://' . $host . '/projet_/public/');
-    } else {
-        define('BASE_URL', $protocol . '://' . $host . '/');
-    }
-}
+class Database
+{
+    public static function connect()
+    {
 
-use PDO;
-use PDOException;
+        // 2️⃣ Infos qui changent selon l’environnement
+            $dbHost = $_ENV['DB_HOST'];
+            $dbName = $_ENV['DB_NAME'];
+            $dbUser = $_ENV['DB_USER'];
+            $dbPass = $_ENV['DB_PASS'];
+        
 
-class Database {
-    public static function connect() {
-        $host = 'localhost';
-        $db = 'db_gdm';
-        $user = 'root';
-        $pass = '';
-        $charset = 'utf8mb4';
-        $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-        $options = [
-            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES   => false,
-        ];
+        // 3️⃣ Connexion à la base de données
         try {
-            $pdo = new PDO($dsn, $user, $pass, $options);
+            $pdo = new \PDO(
+                "mysql:host=$dbHost;dbname=$dbName;charset=utf8",
+                $dbUser,
+                $dbPass
+            );
+
+            // 4️⃣ Ce qu’on renvoie
             return $pdo;
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
+
+        } catch (\PDOException $e) {
+            die('Erreur BDD : ' . $e->getMessage());
         }
     }
 }
