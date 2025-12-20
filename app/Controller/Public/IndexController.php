@@ -11,10 +11,10 @@ class IndexController {
     public function index() {
 
         ob_start();
-        require __DIR__ . '/../../Views/home.php';
-        require __DIR__ . '/../../Views/contact.php';
+        require dirname(__DIR__) . '/../Views/home.php';
+        require dirname(__DIR__) . '/../Views/contact.php';
         $content = ob_get_clean();
-        require __DIR__ . '/../../Views/partials/layout.php';
+        require dirname(__DIR__) . '/../Views/partials/layout.php';
     }
 
     public function contact() {

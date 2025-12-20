@@ -4,7 +4,6 @@
         <input class="form-control" type="text" placeholder="Entrer votre nom"><br>
         <input class="form-control" type="text" placeholder="Entrer votre email"><br>
         <textarea class="form-control" type="text" placeholder="Entrer votre message"></textarea><br>
-        <!-- <input class="form-control" type="text" placeholder="Entrer votre"> -->
         <input class="btn btn-primary" type="submit" value="Envoyer">
     </form>
 </section>
