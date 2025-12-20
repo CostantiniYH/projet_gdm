@@ -1,4 +1,4 @@
-<div class="contianer p-5 shadow-sm rounded-3 mb-3">
+<section class="contianer p-5 shadow-sm rounded-3 mb-3 bg-white">
     <h1 class="text-center">Bienvenue sur  Gestion des matières ou Edu Prime</h1>
     <h3>Equipe : Yaacov, Nathanel, Rephael, Ethan, Jonathan, Avi</h3>
     <p>Ce projet a pour but de nous faire pratiquer le PHP en mode orienté objet avec le pattern MVC. 
@@ -9,7 +9,13 @@
         nous pourrons faire un site e-commerce qui est un peu plus poussé.</p>
     <p>Pour atteindre cette page en local avec : <code>php -S localhost:3000</code>, il faut vous positionner dans 
     le répertoire de l'<code>index.php</code> qui est d'ailleurs la seule entrée dans un design pattern MVC, avec la commande : <code>cd public</code> </p>
-</div>
+</section>
+
+<section class="content bg-white p-5">
+    <h2>Vos matières</h2>
+    <p>Accédez aux informations détaillées de chaque matière et suivez votre progression.</p>
+    <button onclick="alert('Fonctionnalité à venir!')">Voir les matières</button>
+</section>
 <br>
 <br>
 <hr>

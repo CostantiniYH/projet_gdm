@@ -23,6 +23,7 @@ class Router
                     $middleware->handle();
                 }
 
+                // var_dump($uri);
                 $this->callHandler($route['handler']);
                 return;
             }
