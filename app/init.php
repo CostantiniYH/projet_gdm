@@ -9,7 +9,7 @@ if (file_exists($configFile)) {
 use App\Config\Database;
 
 $pdo = Database::connect();
-echo "Connexion OK - ";
+// echo "Connexion OK - ";
 
 require dirname(__DIR__) . '/routes/web.php'; 
 
