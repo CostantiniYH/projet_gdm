@@ -35,14 +35,14 @@
                 <option value="<?= $matiere['id'] ?? '' ;?>"><?= $matiere['name'] ?? ''; ?></option>
                 <?php } ?>
         </select>
-        <label for="matiere">Sélectionner un thème</label>
-        <select class="form-select mb-3" name="matiere" id="matiere">
+        <label for="theme">Sélectionner un thème</label>
+        <select class="form-select mb-3" name="theme" id="theme">
             <?php foreach ($themes as $theme) { ?>
                 <option value="<?= $theme['id'] ?? '' ;?>"><?= $theme['name'] ?? ''; ?></option>
                 <?php } ?>
         </select>
-        <label for="theme">Chapitre</label>
-        <input class="form-control mb-3" type="text" name="theme" id="theme" placeholder="Entrer le chapitre">
+        <label for="chapitre">Chapitre</label>
+        <input class="form-control mb-3" type="text" name="chapitre" id="chapitre" placeholder="Entrer le chapitre">
         <input class="btn btn-success" type="submit" value="Ajouter">
         </div>
     </form>

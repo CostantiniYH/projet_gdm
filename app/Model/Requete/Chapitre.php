@@ -13,14 +13,14 @@ class Chapitre extends Model
     }
     
     public function getChapitre() {
-        $stmt = $this->query("SELECT * FROM {$this->table}");
+        $stmt = $this->query("SELECT * FROM {$this->table} ORDER BY id");
         return $stmt->fetchAll();
     }
 
-    public function insertChapitre($nom, $matiere_id, $theme_id) {
+    public function insertChapitre($name, $matiere_id, $theme_id) {
         $stmt = $this->query(
             "INSERT INTO {$this->table} (name, matieres_id, themes_id) VALUES (?, ?, ?)", [
-                $nom, $matiere_id, $theme_id
+                $name, $matiere_id, $theme_id
             ]);
         return (int) $this->pdo->lastInsertId();
     }
