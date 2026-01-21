@@ -1,32 +1,59 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<?php
+use Core\Route;
+?>
+
+<style> nav * { color: white !important; } </style>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-opacity-25">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">GDM yhc</a>
+    <a class="navbar-brand" href="/">GDM yhc</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
+       
+         -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Liste des matières
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu et">
 
-            <?php foreach($matieres as $matiere) { ?>
-            <li><a class="dropdown-item" href="<?= $matiere ?>"><?= $matiere ?></a></li>
+            <?php foreach($matieres as $matiere) {
+                $link = slugify($matiere['name']); ?>
+            <li><a class="dropdown-item text-black" href="<?= slugifyFirstWord($matiere['name']); ?>"><?= $matiere['name'] ?></a></li>
             <?php } ?>
             
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Disabled</a>
+
+        <?php if ($_SERVER['REQUEST_URI'] === '/dashboard') { ?>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Formulaires
+          </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-black" href="/forms">Ajouter</a></li>
+                <li><a class="dropdown-item text-black" href="/update">Modifier</a></li>
+            </ul>
         </li>
+        <?php } else { ?>
+
+            <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Admin</a>
+            </li>
+
+        <?php } ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/apropos">A propos</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li> 
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

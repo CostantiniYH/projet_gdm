@@ -1,0 +1,49 @@
+<h3 class="text-center mb-5">Formulaires d'alimentation BDD</h3>
+<div class="row gap-3 mb-5">
+    <form class="col-md shadow-sm bg-white p-4 rounded-sm" action="/add_matiere" method="post">
+        <div class="form-group">        
+            <legend>Ajouter une matière</legend>
+            <label for="matiere">Matière</label>
+            <input class="form-control mb-3" type="text" name="matiere" id="matiere" placeholder="Entrer une matière" required>
+            <input class="btn btn-success" type="submit" value="Ajouter">
+        </div>
+    </form>
+    
+    <form class="col-md shadow-sm bg-white p-4 rounded-sm" action="/add_theme" method="post">
+        <div class="form-group">        
+        <legend>Ajouter un thème</legend>
+        <label for="matiere">Sélectionner une matière</label>
+        <select class="form-select mb-3" name="matiere" id="matiere" required>
+            <?php foreach ($matieres as $matiere) { ?>
+                <option value="<?= $matiere['id'] ?? '' ;?>"><?= $matiere['name'] ?? ''; ?></option>
+                <?php } ?>
+        </select>
+        <label for="theme">Thème</label>
+        <input class="form-control mb-3" type="text" name="theme" id="theme" placeholder="Entrer le thème" required>
+        <input class="btn btn-success" type="submit" value="Ajouter">
+        </div>
+    </form>
+</div>
+
+<div class="row gap-3">
+    <form class="col-md shadow-sm bg-white p-4 rounded-sm" action="/add_theme" method="post">
+        <div class="form-group">        
+        <legend>Ajouter un chapitre</legend>
+        <label for="matiere">Sélectionner une matière</label>
+        <select class="form-select mb-3" name="matiere" id="matiere">
+            <?php foreach ($matieres as $matiere) { ?>
+                <option value="<?= $matiere['id'] ?? '' ;?>"><?= $matiere['name'] ?? ''; ?></option>
+                <?php } ?>
+        </select>
+        <label for="matiere">Sélectionner un thème</label>
+        <select class="form-select mb-3" name="matiere" id="matiere">
+            <?php foreach ($themes as $theme) { ?>
+                <option value="<?= $theme['id'] ?? '' ;?>"><?= $theme['name'] ?? ''; ?></option>
+                <?php } ?>
+        </select>
+        <label for="theme">Chapitre</label>
+        <input class="form-control mb-3" type="text" name="theme" id="theme" placeholder="Entrer le chapitre">
+        <input class="btn btn-success" type="submit" value="Ajouter">
+        </div>
+    </form>
+</div>

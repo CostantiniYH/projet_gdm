@@ -1,4 +1,4 @@
-<section class="contianer p-5 shadow-sm rounded-3 mb-3 bg-white">
+<section class="p-5 rounded-3 mb-3 bg-white bg-opacity-75">
     <h1 class="text-center">Bienvenue sur  Gestion des matières ou Edu Prime</h1>
     <h3>Equipe : Yaacov, Nathanel, Rephael, Ethan, Jonathan, Avi</h3>
     <p>Ce projet a pour but de nous faire pratiquer le PHP en mode orienté objet avec le pattern MVC. 
@@ -11,10 +11,10 @@
     le répertoire de l'<code>index.php</code> qui est d'ailleurs la seule entrée dans un design pattern MVC, avec la commande : <code>cd public</code> </p>
 </section>
 
-<section class="content bg-white p-5">
+<section class="content bg-white bg-opacity-75 p-5 rounded">
     <h2>Vos matières</h2>
     <p>Accédez aux informations détaillées de chaque matière et suivez votre progression.</p>
-    <button onclick="alert('Fonctionnalité à venir!')">Voir les matières</button>
+    <button onclick="alert('Fonctionnalité à venir!')" class="btn btn-info">Voir les matières</button>
 </section>
 <br>
 <br>
