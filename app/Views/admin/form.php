@@ -1,6 +1,6 @@
-<h3 class="text-center mb-5">Formulaires d'alimentation BDD</h3>
+<h3 class="text-center mb-5 text-white">Formulaires d'alimentation BDD</h3>
 <div class="row gap-3 mb-5">
-    <form class="col-md shadow-sm bg-white p-4 rounded-sm" action="/add_matiere" method="post">
+    <form class="col-md shadow-sm bg-white p-4 rounded-1" action="/add_matiere" method="post">
         <div class="form-group">        
             <legend>Ajouter une matière</legend>
             <label for="matiere">Matière</label>
@@ -9,7 +9,7 @@
         </div>
     </form>
     
-    <form class="col-md shadow-sm bg-white p-4 rounded-sm" action="/add_theme" method="post">
+    <form class="col-md shadow-sm bg-white p-4 rounded-1" action="/add_theme" method="post">
         <div class="form-group">        
         <legend>Ajouter un thème</legend>
         <label for="matiere">Sélectionner une matière</label>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="row gap-3">
-    <form class="col-md shadow-sm bg-white p-4 rounded-sm" action="/add_theme" method="post">
+    <form class="col-md shadow-sm bg-white p-4 rounded-1" action="/add_theme" method="post">
         <div class="form-group">        
         <legend>Ajouter un chapitre</legend>
         <label for="matiere">Sélectionner une matière</label>
