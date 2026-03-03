@@ -17,7 +17,7 @@ class Database
         // 3️⃣ Connexion à la base de données
         try {
             $pdo = new \PDO(
-                "$dbType:host=$dbHost;dbname=$dbName;charset=utf8",
+                "$dbType:host=$dbHost;dbname=$dbName;",
                 $dbUser,
                 $dbPass
             );
