@@ -7,6 +7,7 @@ class Database
     {
 
         // 2️⃣ Infos qui changent selon l’environnement
+            $dbType = $_ENV['DB_TYPE'];
             $dbHost = $_ENV['DB_HOST'];
             $dbName = $_ENV['DB_NAME'];
             $dbUser = $_ENV['DB_USER'];
@@ -16,7 +17,7 @@ class Database
         // 3️⃣ Connexion à la base de données
         try {
             $pdo = new \PDO(
-                "mysql:host=$dbHost;dbname=$dbName;charset=utf8",
+                "$dbType:host=$dbHost;dbname=$dbName;charset=utf8",
                 $dbUser,
                 $dbPass
             );
