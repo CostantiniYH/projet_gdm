@@ -36,7 +36,7 @@
             <ul>
                 <li><a class="nav-link" href="<?= BASE_URL ?>support">Bloc 1- SMDSI</a></li>
                 <li><a class="nav-link" href="<?= BASE_URL ?>slam">Bloc 2 - SLAM</a></li>
-                <li><a class="nav-link" href="<?= BASE_URL ?>cyber">Bloc 3 - Cybersécurité</a></li>
+                <li><a class="nav-link" href="<?= BASE_URL ?>cybersecurite">Bloc 3 - Cybersécurité</a></li>
             </ul>
         </section>
         <section class="col-md">
