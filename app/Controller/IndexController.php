@@ -87,7 +87,7 @@ class IndexController {
     public function indexCejm() {
         $matieres = $this->model->getMatiere();
 
-        afficherVue('CEJM', 'public/cejm', [
+        afficherVue('CEJM', 'cejm/index.cejm', [
             'matieres' => $matieres
         ]);
     }
