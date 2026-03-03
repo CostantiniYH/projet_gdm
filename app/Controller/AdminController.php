@@ -53,7 +53,7 @@ class AdminController
             if (!empty($_POST['matiere']) && empty($_POST['theme'])) {
                 $nom = $_POST['matiere'] ?? null;
                 $this->modelMatiere->insertMatiere($nom);
-                header("Location: /forms?success=1");
+                header("Location: " . BASE_URL. "forms?success=1");
                 exit;
             }
             
@@ -62,7 +62,7 @@ class AdminController
                 $matiere_id = $_POST['matiere'] ?? null;
 
                 $this->modelTheme->insertTheme($nom, $matiere_id);
-                header("Location: /forms?success=1");
+                header("Location: " . BASE_URL. "forms?success=1");
                 exit;
             }
             
@@ -72,7 +72,7 @@ class AdminController
                 $theme_id = $_POST['theme'] ?? null;
 
                 $this->modelChapitre->insertChapitre($nom, $matiere_id, $theme_id);
-                header("Location: /forms?success=1");
+                header("Location: " . BASE_URL. "forms?success=1");
                 exit;
             }
 
@@ -80,7 +80,7 @@ class AdminController
             error_log($e->getMessage());
             throw new Exception("Une erreur est survenue lors de l'insertion, veuillez réessayer.");
         }
-        header("Location: /forms");
+        header("Location: " . BASE_URL. "forms");
         exit;
     }
 }

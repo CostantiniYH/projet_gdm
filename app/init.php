@@ -41,7 +41,7 @@ function slugifyFirstWord($text)
 require __DIR__ . "/Views/router.view.php";
 
 
-use App\Config\Database;
+use App\config\Database;
 
 $pdo = Database::connect();
 // echo "Connexion OK - ";
