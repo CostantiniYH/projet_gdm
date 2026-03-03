@@ -4,7 +4,7 @@
 
     <section class="row g-3 bg-white bg-opacity-75 p-3 rounded">
         <div class="col-md-3">
-            <img class="img-fluid" src="<?= BASE_URL ?>uploads/images/cms.png" alt="">
+            <img class="img-fluid" src="<?= BASE_URL ?>uploads/tech/cms.png" alt="">
         </div>
         <div class="col-md">
             <p class="text-justifie">

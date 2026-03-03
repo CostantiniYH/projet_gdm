@@ -1,15 +1,15 @@
 <script>
 // const backgrounds = [
-    // '<?= BASE_URL ?>uploads/images/about-mountain.jpg',
-//     '<?= BASE_URL ?>uploads/images/desert-vastness.jpg',
-//     '<?= BASE_URL ?>uploads/images/golden-hour.jpg',
-//     '<?= BASE_URL ?>uploads/images/mountain-dreams.jpg',
-//     '<?= BASE_URL ?>uploads/images/ocean-serenity.jpg',
-//     '<?= BASE_URL ?>uploads/images/spring-bloom.jpg',
-//     '<?= BASE_URL ?>/uploads/images/forest-whispers.jpg',
-//     '<?= BASE_URL ?>uploads/images/summit-glory.jpg',
-//     '<?= BASE_URL ?>uploads/images/waterfall-majesty.jpg',
-//     '<?= BASE_URL ?>uploads/images/wild-encounters.jpg'
+    // '<?= BASE_URL ?>uploads/background/about-mountain.jpg',
+//     '<?= BASE_URL ?>uploads/background/desert-vastness.jpg',
+//     '<?= BASE_URL ?>uploads/background/golden-hour.jpg',
+//     '<?= BASE_URL ?>uploads/background/mountain-dreams.jpg',
+//     '<?= BASE_URL ?>uploads/background/ocean-serenity.jpg',
+//     '<?= BASE_URL ?>uploads/background/spring-bloom.jpg',
+//     '<?= BASE_URL ?>/uploads/background/forest-whispers.jpg',
+//     '<?= BASE_URL ?>uploads/background/summit-glory.jpg',
+//     '<?= BASE_URL ?>uploads/background/waterfall-majesty.jpg',
+//     '<?= BASE_URL ?>uploads/background/wild-encounters.jpg'
 //     // '<?= BASE_URL ?>uploads/jetee-au-bord-lac-hallstatt-autriche_181624-44201.avif',
 //     // '<?= BASE_URL ?>uploads/paysage-montagne-mont-blanc.avif',
 //     // '<?= BASE_URL ?>uploads/thumb_croatie-lacs-plitvice-cascades-7.jpg'
