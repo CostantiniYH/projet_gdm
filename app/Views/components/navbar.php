@@ -6,7 +6,7 @@ use Core\Route;
 
 <nav class="navbar navbar-expand-lg bg-navbar bg-opacity-50">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">GDM SIO yhc</a>
+    <a class="navbar-brand" href="<?= BASE_URL ?>">GDM SIO yhc</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,7 +25,7 @@ use Core\Route;
 
             <?php foreach($matieres as $matiere) {
                 $link = slugify($matiere['name']); ?>
-            <li><a class="dropdown-item text-black" href="<?= slugifyFirstWord($matiere['name']); ?>"><?= $matiere['name'] ?></a></li>
+            <li><a class="dropdown-item text-black" href="<?= BASE_URL . slugifyFirstWord($matiere['name']); ?>"><?= $matiere['name'] ?></a></li>
             <?php } ?>
             
           </ul>
@@ -37,22 +37,22 @@ use Core\Route;
             Formulaires
           </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item text-black" href="/forms">Ajouter</a></li>
-                <li><a class="dropdown-item text-black" href="/update">Modifier</a></li>
+                <li><a class="dropdown-item text-black" href="<?= BASE_URL ?>forms">Ajouter</a></li>
+                <li><a class="dropdown-item text-black" href="<?= BASE_URL ?>update">Modifier</a></li>
             </ul>
         </li>
         <?php } else { ?>
 
             <li class="nav-item">
-            <a class="nav-link" href="/dashboard">Admin</a>
+            <a class="nav-link" href="<?= BASE_URL ?>dashboard">Admin</a>
             </li>
 
         <?php } ?>
         <li class="nav-item">
-          <a class="nav-link" href="/apropos">A propos</a>
+          <a class="nav-link" href="<?= BASE_URL ?>apropos">A propos</a>
         </li> 
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a class="nav-link" href="<?= BASE_URL ?>contact">Contact</a>
         </li> 
       </ul>
       <!-- <form class="d-flex" role="search">
