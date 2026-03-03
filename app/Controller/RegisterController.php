@@ -1,5 +1,5 @@
 <?php
-namespace App\Controller\Auth;
+namespace App\Controller;
 
 class RegisterController {
    
