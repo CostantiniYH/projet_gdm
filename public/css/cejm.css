@@ -1,0 +1,49 @@
+.bg-section-1 {
+    background-image: url("../uploads/background/ocean-serenity.jpg");
+    background-size: cover;      /* Pour que l’image couvre tout le body */
+    background-repeat: no-repeat; /* Évite que l’image se répète */
+    background-position: center; 
+}
+
+.bg-section-2 {
+    background-image: linear-gradient(
+        145deg,
+        rgb(255, 236, 218),
+        rgba(255, 236, 218, 0.671),
+        rgb(255, 236, 218),
+        rgba(255, 236, 218, 0.705),
+        rgb(255, 236, 218)
+    );
+}
+
+.bg-section-3 {
+    background-image: linear-gradient(
+        145deg,
+        rgb(197, 197, 197),
+        rgb(199, 166, 150),
+        rgb(207, 197, 175),
+        rgb(219, 193, 159),
+        rgb(221, 214, 214)
+    );
+}
+
+.bg-section-4 {
+    background-image: linear-gradient(
+        145deg,
+        rgb(24, 122, 24),
+        rgb(223, 247, 223),
+        rgb(103, 212, 103),
+        rgb(223, 247, 223),
+        rgb(85, 196, 85)
+    );
+}
+    
+.bg-card-support {
+    background-image: linear-gradient(
+        145deg,
+        rgb(132, 155, 182),
+        rgba(132, 155, 182, 0.616),
+        rgb(132, 155, 182),
+        rgba(132, 155, 182, 0.363)
+    );
+}

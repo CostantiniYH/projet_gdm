@@ -79,7 +79,7 @@ class IndexController {
     public function indexMath() {
         $matieres = $this->model->getMatiere();
 
-        afficherVue('Matématique', 'public/math', [
+        afficherVue('Mathématiques', 'public/math', [
             'matieres' => $matieres
         ]);
     }
