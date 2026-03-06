@@ -34,7 +34,6 @@
                     <li>La GEPP</li>
                     <li>la getsion des talents</li>
                 </ol>       
-            <h5>Les principes de la protection du salarié</h5>
             <h5>Les leviers de la motivations</h5>
                 <ul>
                     <li>Maslow : la pyramide des besoins</li>
@@ -95,6 +94,9 @@
             <p>Le droit négocié est celui qui est négocier entre les partenaires sociaux représentants syndicals, et patronales
                 afin de déterminer de nouvelles règles representant les réalités professionnelles.
             </p>
+
+            <h5>Les principes de la protection du salarié</h5>
+
         </div>
     </div>
 </section>
