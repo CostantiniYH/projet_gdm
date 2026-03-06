@@ -11,7 +11,12 @@
                 <h3>Chapitre 1 - Economie
                     <a href="<?= BASE_URL ?>ressources/CEJM2-TH5-ECONOMIE.pdf" target="_blank" class="bi bi-file-earmark-arrow-down-fill">
                     </a>
-                </h3>                
+                </h3>
+                <h5>Le marché du travail</h5>             
+                <p class="text-justifie">
+
+                </p>   
+                <h5>La politique de l'emploi</h5>
         </div>
     </div>
 </section>
@@ -24,43 +29,47 @@
                 </a>
             </h3>
             <h4>Quel est l'impact des mutation du travail sur l'emploie et les conditions de travail</h4>
-            <p class="text-justifie"><h5>Les essentiels :</h5> 
-            <ol>
-                <li>La GEPP</li>
-                <li>la getsion des talents</li>
-                <li>
-                    les leviers de la motivation
-                    <ul>
-                        <li>Maslow : la pyramide des besoins</li>
-                        <li>Herzberg : Les facteurs de motivations et facteurs d'hygienes</li>
-                        <li>Adams : notions d'équité</li>
-                        <li>Les leviers RH</li>
-                    </ul>
-                </li>
+            <h5>La GRH et la GEPP</h5>
+                <ol>
+                    <li>La GEPP</li>
+                    <li>la getsion des talents</li>
+                </ol>       
+            <h5>Les principes de la protection du salarié</h5>
+            <h5>Les leviers de la motivations</h5>
+                <ul>
+                    <li>Maslow : la pyramide des besoins</li>
+                    <li>Herzberg : Les facteurs de motivations et facteurs d'hygienes</li>
+                    <li>Adams : notions d'équité</li>
+                    <li>Les leviers RH</li>
+                </ul>
+                </p>
+                <p>
+                    Maslow (Abraham)
+                </p>
+                <p>
+                    Herzberg dit 
+                </p>
+                <p>
+                    Adams dit 
+                </p>
+            <h5>Les conditions de travail et leurs évolutions</h5>
+            <h5>Les modifications du raport à l'emploi</h5>
+            <ul>
                 <li>Les attentes des digitales natives</li>
-            </ol>       
-        </p>
-        <p>Adams dit </p>
-        <p>
-            Herzberg dit 
-            </p>
+            </ul>
         </div>
     </div>
 </section>
 
 <section class="bg-section-4 row p-5">
     <div class="col-md">
-
         <div class="bg-white p-4 rounded">
             <h3>Chapitre 3 - Juridique
              <a href="<?= BASE_URL ?>ressources/CEJM2-TH5-DROIT.pdf" target="_blank" class="bi bi-file-earmark-arrow-down-fill">
                 </a>
             </h3>
-            <p>Définition du droit négocié :</p>
-            <p>Le droit négocié est celui qui est négocier entre les partenaires sociaux représentants syndicals, et patronales
-                afin de déterminer de nouvelles règles representant les réalités professionnelles.
-            </p>
-            <h5>Les sources du droit du travail : nationales et supranationnales</h5>
+            <h5>Les sources du droit du travail imposées et négociées</h5>
+            <h6>Les sources nationales et supranationnales</h6>
             <ul>
                 <li>Les sources internationnales - OIT : Organisation Internationnal du Travail</li>
                 <li>Les sources européennes - CEDH</li>
@@ -81,6 +90,11 @@
                     </ul>
                 </li>
             </ul>
+
+            <h6>Définition du droit négocié :</h6>
+            <p>Le droit négocié est celui qui est négocier entre les partenaires sociaux représentants syndicals, et patronales
+                afin de déterminer de nouvelles règles representant les réalités professionnelles.
+            </p>
         </div>
     </div>
 </section>
