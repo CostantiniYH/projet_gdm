@@ -48,6 +48,7 @@ $pdo = Database::connect();
 
 require dirname(__DIR__) . '/routes/web.php'; 
 require dirname(__DIR__) . '/routes/admin.php'; 
+require dirname(__DIR__) . '/routes/auth.php'; 
 
 
 $router = new Core\Router($pdo);

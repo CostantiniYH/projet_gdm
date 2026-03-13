@@ -24,14 +24,32 @@ class AdminController
     }
 
 
-    public function index() {
+    public function dashboard() {
         $matieres = $this->modelMatiere->getMatiere(); 
+        $themes = $this->modelTheme->getTheme();
+        $chapitres = $this->modelChapitre->getChapitre();
 
 
         afficherVue('Dashboard admin', 'admin/dashboard', [
-            'matieres' => $matieres
-        ]);
+            'matieres' => $matieres,
+            'themes' => $themes,
+            'chapitres' => $chapitres
+        ], "");
     }
+
+    public function search() {
+        $matieres = $this->modelMatiere->getMatiere(); 
+        $themes = $this->modelTheme->getTheme();
+        $chapitres = $this->modelChapitre->getChapitre();
+
+
+        afficherVue('Dashboard admin', 'admin/dashboard', [
+            'matieres' => $matieres,
+            'themes' => $themes,
+            'chapitres' => $chapitres
+        ], "/dashboard");
+    }
+
     public function forms() {
         $matieres = $this->modelMatiere->getMatiere(); 
         $themes = $this->modelTheme->getTheme();
@@ -45,7 +63,7 @@ class AdminController
         afficherVue('Ajouter une donnée', 'admin/form', [
             'matieres' => $matieres,
             'themes' => $themes
-            ]);
+            ], "");
     }
 
     public function edit() {

@@ -13,7 +13,7 @@
 <?php  
   if ($_SERVER['REQUEST_URI'] === '/') {
     $css = '/home';
-  } else {
+  } elseif (empty($css)) {
     $css = $_SERVER['REQUEST_URI'];
   }
 ?>

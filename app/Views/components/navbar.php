@@ -25,7 +25,7 @@ use Core\Route;
 
             <?php foreach($matieres as $matiere) {
                 $link = slugify($matiere['name']); ?>
-            <li><a class="dropdown-item text-black" href="<?= BASE_URL . slugifyFirstWord($matiere['name']); ?>"><?= $matiere['name'] ?></a></li>
+            <li><a class="dropdown-item text-black" href="<?= BASE_URL . slugifyFirstWord($matiere['name'])?>/<?= $matiere['id'] ?>"><?= $matiere['name'] ?></a></li>
             <?php } ?>
             
           </ul>
@@ -59,6 +59,15 @@ use Core\Route;
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> -->
+      <ul class="navbar-nav">
+        <li class="">
+          <?php if (empty($_SESSION['user'])): ?>
+          <a href="<?= BASE_URL ?>login" class="bi bi-person-fill"></a>
+          <?php else: ?>
+            <a href="<?= BASE_URL ?>logout" class="bi bi-door-open-fill text-danger"></a>
+            <?php endif ?>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

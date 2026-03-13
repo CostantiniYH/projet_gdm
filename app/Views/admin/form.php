@@ -2,6 +2,7 @@
     <h3 class="text-center text-white">Formulaires d'alimentation BDD</h3>
 </section>
     <section class="row bg-section-2 p-5">
+        <!-- Formulaire d'ajout d'une matière -->
         <div class="col-md">
             <form class="h-100 shadow-sm bg-white p-5 rounded-1" action="/add_matiere" method="post">
                 <div class="form-group">        
@@ -13,6 +14,7 @@
             </form>
         </div>
         
+        <!-- Formulaire d'ajout d'un thème -->
         <div class="col-md">
             <form class="shadow-sm bg-white p-5 rounded-1" action="/add_theme" method="post">
                 <div class="form-group">        
@@ -32,6 +34,8 @@
     </section>
 
     <section class="row bg-section-2 p-5">
+
+        <!-- Formulaire d'ajout d'un chapitre -->
         <div class="col-md">
             <form class="shadow-sm bg-white p-5 rounded-1" action="/add_theme" method="post">
                 <div class="form-group">        

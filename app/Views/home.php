@@ -1,6 +1,7 @@
 <section class="bg-section-1 p-5">
     <h1 class="text-center text-white mb-5">Bienvenue sur  Gestion des matières ou Edu Prime</h1>
 
+    <!-- Affichage dynamique des matières -->
     <div class="row g-5">
         <?php foreach ($matieres as $m): ?>
             <div class="col-md-4 col-lg-3 hvr-grow">
@@ -10,15 +11,18 @@
                 ?>
                 <div class="card h-100 bg-card-home p-3 text-center">
 
-                    <a class="nav-link stretched-link" href="<?= BASE_URL ?><?php if (count($mots) > 0) echo $mots[0] ?>">
+                    <a href="<?= BASE_URL ?>matiere/<?= $m['id']  ?>"
+                    class="nav-link stretched-link">
                         <?= $m['name'] ?>
                     </a>    
                 </div>
             </div>
         <?php endforeach ?>
     </div>
+
 </section>  
 
+<!-- Rensigner le référentiel à l'utilisateur -->
 <section class="p-5">
     <h3>Compétences attestées</h3>
     <div class="row text-justifie g-4">

@@ -16,6 +16,15 @@ class Theme extends Model
         $stmt = $this->query("SELECT * FROM {$this->table} ORDER BY id");
         return $stmt->fetchAll();
     }
+    
+    public function getThemeById($id) {
+        $stmt = $this->query(
+            "SELECT * FROM {$this->table} 
+            WHERE matieres_id = $id 
+            ORDER BY id");
+        return $stmt->fetchAll();
+    }
+    
 
     public function insertTheme($nom, $matiere_id) {
         $stmt = $this->query(

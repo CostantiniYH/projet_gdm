@@ -1,6 +1,6 @@
 <?php
 
-function afficherVue($titre, $template, $data = [])
+function afficherVue($titre, $template, $data = [], $css)
 {
     extract($data);
     ob_start();
@@ -8,6 +8,3 @@ function afficherVue($titre, $template, $data = [])
     $content = ob_get_clean();
     require_once dirname(__DIR__) . "/Views/partials/layout.php";
 }
-
-
-?>
