@@ -31,3 +31,4 @@ class Matiere extends Model
         return (int) $this->pdo->lastInsertId();
     }
 }
+

@@ -27,7 +27,7 @@ class Router
                 $params = $matches;  
 
                 foreach ($route['middleware'] as $middlewareName) {
-$middlewareClass = 'Middlewares\\' . ucfirst($middlewareName) . "Middleware";
+                    $middlewareClass = 'Middlewares\\' . ucfirst($middlewareName) . "Middleware";
                     $middleware = new $middlewareClass();
                     $middleware->handle();
                 }

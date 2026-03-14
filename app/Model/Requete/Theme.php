@@ -42,5 +42,5 @@ class Theme extends Model
             ]);
         return (int) $this->pdo->lastInsertId();
     }
-
 }
+

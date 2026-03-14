@@ -31,5 +31,5 @@ class Chapitre extends Model
             ]);
         return (int) $this->pdo->lastInsertId();
     }
-
 }
+
