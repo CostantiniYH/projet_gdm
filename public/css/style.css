@@ -1,24 +1,101 @@
 body {
-    background-size: cover;      /* Pour que l’image couvre tout le body */
-    background-repeat: no-repeat; /* Évite que l’image se répète */
-    background-position: center;  
-    transition: background-image 1s ease-in-out;
+    background-image: linear-gradient(
+        45deg,
+        rgb(252, 246, 239),
+        rgba(247, 233, 217, 0.986),
+        rgb(243, 240, 235),
+        rgb(243, 235, 226),
+        rgb(243, 229, 212)
+
+    );
 }
-
-
-.bg-blue {
+/* Bacjkground 2 */
+.bg-section-2 {
     background-image: linear-gradient(
         145deg,
-        rgb(0, 115, 255),
-        rgba(0, 115, 255, 0.664),
-        rgb(0, 115, 255),
-        rgba(0, 115, 255, 0.253),
-        rgb(0, 115, 255),
-        rgba(0, 115, 255, 0),
-        rgb(0, 115, 255)
+        rgb(132, 155, 182),
+        rgba(132, 155, 182, 0.616),
+        rgb(132, 155, 182),
+        rgba(132, 155, 182, 0.363)
     );
 }
 
+/* Background home */
+.bg-section-home {
+    background-image: url("../uploads/background/about-mountain.jpg");
+    background-size: cover;      /* Pour que l’image couvre tout le body */
+    background-repeat: no-repeat; /* Évite que l’image se répète */
+    background-position: center; 
+    transition: background-image 1s ease-in-out;
+}
+
+/* Background Matieres */
+.bg-section-matiere {
+    background-image: url("../uploads/background/jetee-au-bord-lac-hallstatt-autriche_181624-44201.avif");
+    background-size: cover;      /* Pour que l’image couvre tout le body */
+    background-repeat: no-repeat; /* Évite que l’image se répète */
+    background-position: center; 
+}
+
+/* Background Thèmes */
+.bg-section-theme {
+    background-image: url("../uploads/background/forest-whispers.jpg");
+    background-size: cover;      /* Pour que l’image couvre tout le body */
+    background-repeat: no-repeat; /* Évite que l’image se répète */
+    background-position: center; 
+}
+
+/* Background Chapitres */
+.bg-section-chapitre {
+    background-image: url("../uploads/background/spring-bloom.jpg");
+    background-size: cover;      /* Pour que l’image couvre tout le body */
+    background-repeat: no-repeat; /* Évite que l’image se répète */
+    background-position: center; 
+}
+
+/* Background bleu */
+.bg-blue {
+    background-image: linear-gradient(
+        145deg,
+        rgb(37, 104, 185),
+        rgba(0, 115, 255, 0.664),
+        rgb(23, 95, 182),
+        rgba(0, 115, 255, 0.623),
+        rgb(36, 99, 194),
+        rgba(0, 115, 255, 0.815),
+        rgb(9, 92, 194)
+    );
+}
+
+/* Background marron */
+.bg-marron {
+    background-image: linear-gradient(
+        45deg,
+        rgb(223, 211, 196),
+        rgba(204, 178, 147, 0.986),
+        rgb(206, 203, 199),
+        rgb(190, 149, 98),
+        rgb(223, 211, 196)
+
+    );
+}
+
+/* Couleur carte matière */
+.bg-card-matiere {
+    background-color: rgb(146, 71, 10);
+    background-image: linear-gradient(
+        145deg,
+        rgb(218, 206, 169),
+        rgba(240, 231, 206, 0.616),
+        rgb(197, 183, 156),
+        rgba(132, 155, 182, 0.363)
+    );
+    border-radius: 20px;
+    font-weight: bold;
+    align-content: center;
+}
+
+/* Aligné le texte à marges égales */
 .text-justifie {
     text-align: justify;
 }
@@ -27,6 +104,7 @@ footer {
     
 }
 
+/* Background footer */
 .bg-footer {
     color: white;
     background-image: linear-gradient(

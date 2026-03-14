@@ -50,18 +50,18 @@
         <section class="col-md">
             <h5>A propos</h5>
             <ul class="list-decoration-none mx-auto">
+                <!-- <li class=""><a href="<?=  BASE_URL ?>"></a></li>
                 <li class=""><a href="<?=  BASE_URL ?>"></a></li>
-                <li class=""><a href="<?=  BASE_URL ?>"></a></li>
-                <li class=""><a href="<?=  BASE_URL ?>"></a></li>
+                <li class=""><a href="<?=  BASE_URL ?>"></a></li> -->
             </ul>
         </section>
         
         <section class="col-md">
             <h5>Mentions légales</h5>
             <ul class="mx-auto">
+                <!-- <li></li>
                 <li></li>
-                <li></li>
-                <li></li>
+                <li></li> -->
             </ul>
         </section>
     </div>

@@ -16,7 +16,7 @@
                         <button type="submit">Rechercher</button>
                 </form>
                 <!-- Liste -->
-                <ul class="">
+                <ol class="">
                     <?php 
                     // var_dump($matieres) ;
                     foreach ($matieres as $key => $m):
@@ -27,7 +27,7 @@
                         <?= $m['name'] ?>
                     </li>
                     <?php endforeach ?>
-                </ul>
+                </ol>
             </div>
         </div>
     </section>
@@ -37,7 +37,7 @@
         <!-- Elément de la ligne -->
         <div class="col-md">
             <!-- Liste -->
-            <ul class="bg-white p-5 rounded-4 border border-2 border-success">
+            <ol class="bg-white p-5 rounded-4 border border-2 border-success">
                 <?php 
                 // var_dump($matieres) ;
                 foreach ($themes as $key => $t):
@@ -48,7 +48,7 @@
                     <?= $t['name'] ?>
                 </li>
                 <?php endforeach ?>
-            </ul>
+            </ol>
         </div>
     </section>
 
@@ -57,7 +57,7 @@
         <!-- Elément de la ligne -->
         <div class="col-md">
             <!-- Liste -->
-            <ul class="bg-white p-5 rounded-4 border border-2 border-success">
+            <ol class="bg-white p-5 rounded-4 border border-2 border-success">
                 <?php 
                 // var_dump($matieres) ;
                 foreach ($chapitres as $key => $c):
@@ -68,7 +68,7 @@
                     <?= $c['name'] ?>
                 </li>
                 <?php endforeach ?>
-            </ul>
+            </ol>
         </div>
     </section>
 </main>

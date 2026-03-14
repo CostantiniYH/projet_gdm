@@ -17,7 +17,7 @@ class Theme extends Model
         return $stmt->fetchAll();
     }
     
-    public function getThemeByMatiere($id) {
+    public function getThemeByMatiereId($id) {
         $stmt = $this->query(
             "SELECT * FROM {$this->table} 
             WHERE matieres_id = $id 
@@ -31,7 +31,7 @@ class Theme extends Model
             "SELECT * FROM {$this->table} 
             WHERE id = $id 
             ORDER BY id");
-        return $stmt->fetchAll();
+        return $stmt->fetch();
     }
     
 

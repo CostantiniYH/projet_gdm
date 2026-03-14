@@ -23,130 +23,65 @@ class IndexController {
     public function index() {
         $matieres = $this->Matieres->getMatiere();
 
-        afficherVue('Accueil', 'home', [
+        afficherVue('Accueil', "", 'home', "public/referentiel", "", "", [
             'matieres' => $matieres
-        ], "");
+        ]);
     }
 
-    // Index des matières : chaque matière apparaitra avec ses thèmes associés
+    // Liste des matières
+    public function matieres() {
+        $matieres = $this->Matieres->getMatiere();
+
+        afficherVue('Accueil', "", "public/matieres", "", "", "", [
+            'matieres' => $matieres
+        ]);
+    }
+
+    // Matière sélectionnée : liste des thèmes de la matière slectionnée
      public function matiere($id) {
         // Récupérer toutes les matières
         $listMatieres = $this->Matieres->getMatiere();
         // Identifier la matière correspondante à l'id stocké
         $matiere = $this->Matieres->getMatiereById($id);
         // Sélectionner tous les thèmes associés à l'id de la matière
-        $themes = $this->Themes->getThemeByMatiere($id);
+        $themes = $this->Themes->getThemeByMatiereId($id);
 
-        afficherVue($matiere['name'], 'public/matiere', [
+        afficherVue($matiere['name'], "/matiere", 'public/themes', "", "", "", [
             'matieres' => $listMatieres,
             'themes' => $themes
-        ], "/matiere");
+        ]);
     }
 
-     // Index des themes : chaque theme apparaitra avec ses chapitres associés
+     // Thème sélectioné : liste des chapitres du thème sélectionné
      public function theme($id) {
-        // Récupérer toutes les matières pour la navbar et autre
+        // Récupérer toutes les matières pour la navbar ou autre
         $listMatieres = $this->Matieres->getMatiere();
+        // Récupérer la ligne du theme pour l'id et l'utiliser pour le fil d'ariane
         $themes = $this->Themes->getThemeById($id);
+        // Récupérer les lignes de la table chapitres selon le thème
         $chapitres = $this->Chapitres->getChapitreById($id);
-        foreach ($themes as $t);
 
-        afficherVue($t['name'], 'public/theme', [
+        afficherVue($themes['name'], "", 'public/chapitres', "", "", "", [
             'matieres' => $listMatieres,
             'themes' => $themes,
             'chapitres' => $chapitres
-        ], "/matiere");
-    }
-
-    // Bloc 1
-    public function indexSupport($id) {
-        $matieres = $this->Matieres->getMatiere();
-        $themes = $this->Themes->getThemeById($id);
-
-        afficherVue('Support et mise à disposition des services informatiques', 'public/support', [
-            'matieres' => $matieres,
-            'themes' => $themes
-        ], "/support");
-    }
-
-    // Bloc 2 option SISR
-    public function indexSisr() {
-        $matieres = $this->Matieres->getMatiere();
-        $themes = $this->Themes->getTheme();
-        afficherVue('Solution Infrastructure Systèmes et Réseaux', 'public/sisr', [
-            'matieres' => $matieres,
-            'themes' => $themes
-        ], "");
+        ]);
     }
     
-    // Bloc 2 option SLAM
-    public function indexSlam() {
-        $matieres = $this->Matieres->getMatiere();
-        $themes = $this->Themes->getTheme();
-        afficherVue('Solution Logiciel et Application Métiers', 'public/slam', [
-            'matieres' => $matieres,
-            'themes' => $themes
-        ], "");
-    }
-
-    public function indexCyber() {
-        $matieres = $this->Matieres->getMatiere();
-        $themes = $this->Themes->getTheme();
-        afficherVue('Cybersécurité', 'public/cyber', [
-            'matieres' => $matieres,
-            'themes' => $themes
-        ], "");
-    }
-
-    public function indexMath() {
-        $matieres = $this->Matieres->getMatiere();
-        $themes = $this->Themes->getTheme();
-        afficherVue('Mathématiques', 'public/math', [
-            'matieres' => $matieres,
-            'themes' => $themes
-        ], "");
-    }
-
-    public function indexCejm() {
-        $matieres = $this->Matieres->getMatiere();
-        $themes = $this->Themes->getTheme();
-        afficherVue('CEJM', 'cejm/index.cejm', [
-            'matieres' => $matieres,
-            'themes' => $themes
-        ], "");
-    }
-
-    public function indexCge() {
-        $matieres = $this->Matieres->getMatiere();
-        $themes = $this->Themes->getTheme();
-        afficherVue('CGE', 'public/cge', [
-            'matieres' => $matieres,
-            'themes' => $themes
-        ], "");
-    }
-
-    public function indexAnglais() {
-        $matieres = $this->Matieres->getMatiere();
-        $themes = $this->Themes->getTheme();
-        afficherVue('Anglais', 'public/anglais', [
-            'matieres' => $matieres,
-            'themes' => $themes
-        ], "");
-    }
 
     public function Apropos() {
         $matieres = $this->Matieres->getMatiere();
 
-        afficherVue('Accueil', 'apropos', [
+        afficherVue('Accueil', "", 'apropos', "", "","", [
             'matieres' => $matieres
-        ], "");
+        ]);
     }
 
     public function contact() {
         $matieres = $this->Matieres->getMatiere();
 
-        afficherVue('Contact', 'contact', [
+        afficherVue('Contact', "", 'contact', "", "","", [
             'matieres' => $matieres
-        ], "");
+        ]);
     }
 }

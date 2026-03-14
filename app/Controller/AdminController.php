@@ -30,11 +30,11 @@ class AdminController
         $chapitres = $this->modelChapitre->getChapitre();
 
 
-        afficherVue('Dashboard admin', 'admin/dashboard', [
+        afficherVue('Dashboard admin', "", 'admin/dashboard', "", "" , "", [
             'matieres' => $matieres,
             'themes' => $themes,
             'chapitres' => $chapitres
-        ], "");
+        ]);
     }
 
     public function search() {
@@ -43,11 +43,11 @@ class AdminController
         $chapitres = $this->modelChapitre->getChapitre();
 
 
-        afficherVue('Dashboard admin', 'admin/dashboard', [
+        afficherVue('Dashboard admin', "/dashboard", 'admin/dashboard', "", "", "", [
             'matieres' => $matieres,
             'themes' => $themes,
             'chapitres' => $chapitres
-        ], "/dashboard");
+        ]);
     }
 
     public function forms() {
@@ -60,10 +60,10 @@ class AdminController
             return $add_matiere;
         }
 
-        afficherVue('Ajouter une donnée', 'admin/form', [
+        afficherVue('Ajouter une donnée', "", 'admin/form', "", "", "", [
             'matieres' => $matieres,
             'themes' => $themes
-            ], "");
+            ]);
     }
 
     public function edit() {

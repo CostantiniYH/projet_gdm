@@ -33,7 +33,7 @@
         </div>
     </section>
 
-    <section class="row bg-section-2 p-5">
+    <section class="row bg-section-3 p-5">
 
         <!-- Formulaire d'ajout d'un chapitre -->
         <div class="col-md">

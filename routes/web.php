@@ -3,6 +3,7 @@ declare(strict_types=1);
 use Core\Route;
 
 Route::get('/', 'IndexController@index');
+Route::get("/matieres", 'IndexController@matieres');
 Route::get("/matiere/{id}", 'IndexController@matiere');
 Route::get("/theme/{id}", 'IndexController@theme');
 

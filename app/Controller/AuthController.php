@@ -25,9 +25,9 @@ class AuthController
     public function formRegister() {    
         $matieres = $this->matiere->getMatiere();
 
-        afficherVue('Inscription', 'auth/register', [
+        afficherVue('Inscription', "/auth", 'auth/register', "", "", "", [
             'matieres' => $matieres
-        ], "/auth");
+        ]);
     }
     
     public function register() {
@@ -56,9 +56,9 @@ class AuthController
         $css = "/auth";
         $matieres = $this->matiere->getMatiere();
 
-        afficherVue('Connexion', 'auth/login', [
+        afficherVue('Connexion', '/auth', 'auth/login', "", "", "", [
             'matieres' => $matieres
-        ], '/auth');
+        ]);
     }
 
     public function login()

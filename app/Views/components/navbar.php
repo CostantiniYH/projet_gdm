@@ -41,7 +41,7 @@ use Core\Route;
                 <li><a class="dropdown-item text-black" href="<?= BASE_URL ?>update">Modifier</a></li>
             </ul>
         </li>
-        <?php } else { ?>
+        <?php } elseif (isset(($_SESSION['user'])) && !empty($_SESSION['user']['role'] == 'admin')) { ?>
 
             <li class="nav-item">
             <a class="nav-link" href="<?= BASE_URL ?>dashboard">Admin</a>
