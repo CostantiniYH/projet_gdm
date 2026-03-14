@@ -4,7 +4,7 @@
     <section class="row bg-section-2 p-5">
         <!-- Formulaire d'ajout d'une matière -->
         <div class="col-md">
-            <form class="h-100 shadow-sm bg-white p-5 rounded-1" action="/add_matiere" method="post">
+            <form class="h-100 shadow-sm bg-white p-5 rounded-1" action="<?= BASE_URL ?>add_matiere" method="post">
                 <div class="form-group">        
                     <legend class="text-center">Ajouter une matière</legend>
                     <label for="matiere">Matière</label>
@@ -16,7 +16,7 @@
         
         <!-- Formulaire d'ajout d'un thème -->
         <div class="col-md">
-            <form class="shadow-sm bg-white p-5 rounded-1" action="/add_theme" method="post">
+            <form class="shadow-sm bg-white p-5 rounded-1" action="<?= BASE_URL ?>add_theme" method="post">
                 <div class="form-group">        
                     <legend class="text-center">Ajouter un thème</legend>
                     <label for="matiere">Sélectionner une matière</label>
@@ -37,7 +37,7 @@
 
         <!-- Formulaire d'ajout d'un chapitre -->
         <div class="col-md">
-            <form class="shadow-sm bg-white p-5 rounded-1" action="/add_theme" method="post">
+            <form class="shadow-sm bg-white p-5 rounded-1" action="<?= BASE_URL ?>add_chapitre" method="post">
                 <div class="form-group">        
                     <legend class="text-center">Ajouter un chapitre</legend>
                     <label for="matiere">Sélectionner une matière</label>

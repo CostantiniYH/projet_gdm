@@ -8,3 +8,4 @@ Route::middleware(['admin'])->get('/update', 'AdminController@update');
 
 Route::middleware(['admin'])->post('/add_matiere', 'AdminController@edit');
 Route::middleware(['admin'])->post('/add_theme', 'AdminController@edit');
+Route::middleware(['admin'])->post('/add_chapitre', 'AdminController@edit');

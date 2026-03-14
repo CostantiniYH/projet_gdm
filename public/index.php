@@ -17,4 +17,5 @@ function flash($type, $message) {
         'message' => $message
     ];
 }
+
 require dirname(__DIR__) . '/app/init.php';

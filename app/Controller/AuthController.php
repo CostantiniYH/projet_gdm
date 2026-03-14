@@ -37,12 +37,12 @@ class AuthController
         $errors = $this->serviceRegister->registerUser($data);
 
         if (!empty($errors)) {
-            $_SESSION['flash']['error'] = implode('<br>', $errors);
+            flash('error', implode('<br>', $errors));
             header("Location: " . BASE_URL . "register");
             exit;
         }
 
-        $_SESSION['flash']['success'] = "Inscription réussi !";
+        flash('success', "Inscription réussi !");
         if (!headers_sent()) {
             header("Location: " . BASE_URL . "login");
             exit;

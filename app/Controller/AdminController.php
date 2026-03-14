@@ -71,7 +71,8 @@ class AdminController
             if (!empty($_POST['matiere']) && empty($_POST['theme'])) {
                 $nom = $_POST['matiere'] ?? null;
                 $this->modelMatiere->insertMatiere($nom);
-                header("Location: " . BASE_URL. "forms?success=1");
+                flash('success', "Matière ajoutée avec succès !");
+                header("Location: " . BASE_URL. "forms");
                 exit;
             }
             
@@ -80,7 +81,8 @@ class AdminController
                 $matiere_id = $_POST['matiere'] ?? null;
 
                 $this->modelTheme->insertTheme($nom, $matiere_id);
-                header("Location: " . BASE_URL. "forms?success=1");
+                flash('success', "Thème ajouté avec succès !");
+                header("Location: " . BASE_URL. "forms");
                 exit;
             }
             
@@ -90,7 +92,8 @@ class AdminController
                 $theme_id = $_POST['theme'] ?? null;
 
                 $this->modelChapitre->insertChapitre($nom, $matiere_id, $theme_id);
-                header("Location: " . BASE_URL. "forms?success=1");
+                flash('success', "Chapitre ajouté avec succès !");
+                header("Location: " . BASE_URL. "forms");
                 exit;
             }
 
