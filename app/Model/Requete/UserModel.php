@@ -21,7 +21,7 @@ class UserModel extends Model
     }
 
     public function insert($user) {
-        $sql = "INSERT INTO $this->table (nom, prenom, email, password, role) VALUE (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO $this->table (nom, prenom, email, password, role) VALUES (?, ?, ?, ?, ?)";
         $this->query($sql, [
             $user->get_name(),
             $user->get_firstname(),
