@@ -13,19 +13,21 @@ class Matiere extends Model
     }
 
     public function getMatiere() {
-        $stmt = $this->query("SELECT * FROM $this->table ORDER BY id");
+        $stmt = $this->query("SELECT * FROM $this->table 
+        ORDER BY id");
         return $stmt->fetchAll();
     }
     
     public function getMatiereById($id) {
         $stmt = $this->query("SELECT * FROM $this->table 
-                              WHERE id = $id
-                              ORDER BY id");
+        WHERE id = $id 
+        ORDER BY id");
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public function insertMatiere($nom) {
-        $stmt = $this->query("INSERT INTO {$this->table} (name) VALUES (?)", [$nom]);
+        $stmt = $this->query("INSERT INTO {$this->table} (name) 
+        VALUES (?)", [$nom]);
         return (int) $this->pdo->lastInsertId();
     }
 }

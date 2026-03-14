@@ -11,10 +11,22 @@
 
     <section class="container-fluid">
         <div class="row p-5 g-4">
-            <?php foreach ($themes as $key => $t): ?>
-                <?php if (in_array($t['matieres_id'], [1, 2, 3, 4])) {$color = 'primary';}
-             elseif ($t['matieres_id'] == 5) {$color = 'danger';}
-             else {$color = 'warning';} ;?>
+
+            <?php 
+            foreach ($themes as $key => $t): 
+            ?>
+                <?php 
+                if (in_array($t['matieres_id'], [1, 2, 3, 4])) {
+                        $color = 'dark';
+                    } elseif ($t['matieres_id'] == 5) {
+                        $color = 'danger';
+                    } elseif ($t['matieres_id'] == 8) {
+                        $color = 'info';
+                    } else {
+                        $color = 'warning';
+                    };
+                ?>
+
             <div class="col-md-3">
                 <div class="shadow rounded p-3 bg-white h-100 border border-2 border-<?= $color ?>">
                     <a href="<?= BASE_URL ?>theme/<?= $t['id'] ?>" class="nav-link">
@@ -22,7 +34,11 @@
                     </a>
                 </div>
             </div>
-            <?php endforeach ?>
+
+            <?php
+            endforeach 
+            ?>
+            
         </div>
     </section>
     

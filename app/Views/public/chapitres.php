@@ -18,7 +18,7 @@
 
                 <?php 
                 if (in_array($c['matieres_id'], [1, 2, 3, 4])) {
-                    $color = 'primary';
+                    $color = 'secondary';
                 } elseif ($c['matieres_id'] == 5) {
                     $color = 'danger';
                 } else {

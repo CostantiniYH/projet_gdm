@@ -82,17 +82,23 @@ body {
 
 /* Couleur carte matière */
 .bg-card-matiere {
-    background-color: rgb(146, 71, 10);
+    background-color: rgb(10, 92, 146);
     background-image: linear-gradient(
         145deg,
-        rgb(218, 206, 169),
+        rgb(169, 198, 218),
         rgba(240, 231, 206, 0.616),
-        rgb(197, 183, 156),
+        rgb(156, 188, 197),
         rgba(132, 155, 182, 0.363)
     );
-    border-radius: 20px;
+    border-radius: 10px;
     font-weight: bold;
     align-content: center;
+    border: 2px solid rgb(41, 128, 199);
+}
+
+/* Bordure bleu cassé */
+.border-bleu {
+    border: 2px solid rgb(41, 128, 199);
 }
 
 /* Aligné le texte à marges égales */
