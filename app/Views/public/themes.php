@@ -1,5 +1,5 @@
 <main class="bg-section-theme p-5">
-    <h2 class="text-white"><?= $titre ?></h2>
+    <h2 class="text-white">Matière : <?= $titre ?></h2>
     <h3 class="text-white">Parcourez les thèmes disponibles</h3>
 
     <div class="text-white">
