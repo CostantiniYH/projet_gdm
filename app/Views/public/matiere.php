@@ -11,8 +11,8 @@
              else {$color = 'warning';} ;?>
             <div class="col-md-3">
                 <div class="shadow rounded p-3 h-100 border border-2 border-<?= $color ?>">
-                    <a href="<?= BASE_URL ?>theme/<?= $t['id'] ?>">
-                        <?= $t['name']. '  '. $t['id'] ?>
+                    <a href="<?= BASE_URL ?>theme/<?= $t['id'] ?>" class="nav-link">
+                        <?= $t['name'] ?>
                     </a>
                 </div>
             </div>

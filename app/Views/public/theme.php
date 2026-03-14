@@ -3,6 +3,7 @@
     <h3 class="text-white">Parcourez les chapitres disponibles</h3>
 </main>
 
+<div><a href="<?= BASE_URL ?>">Home / </a><a href="<?= BASE_URL ?>matiere/<?= $chapitres[0]['matieres_id'] ?>">Thèmes</a></div>
 <section class="container-fluid">
     <div class="row p-5 g-4">
         <?php foreach ($chapitres as $key => $t): ?>
