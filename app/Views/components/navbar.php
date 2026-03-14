@@ -25,7 +25,7 @@ use Core\Route;
 
             <?php foreach($matieres as $matiere) {
                 $link = slugify($matiere['name']); ?>
-            <li><a class="dropdown-item text-black" href="<?= BASE_URL . slugifyFirstWord($matiere['name'])?>/<?= $matiere['id'] ?>"><?= $matiere['name'] ?></a></li>
+            <li><a class="dropdown-item text-black" href="<?= BASE_URL ?>matiere/<?= $matiere['id'] ?>"><?= $matiere['name'] ?></a></li>
             <?php } ?>
             
           </ul>

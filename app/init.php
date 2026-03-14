@@ -38,6 +38,7 @@ function slugifyFirstWord($text)
     return slugify($matches[0] ?? '');
 }
 
+
 require __DIR__ . "/Views/router.view.php";
 
 

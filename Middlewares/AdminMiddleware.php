@@ -8,8 +8,9 @@ class AdminMiddleware
             session_start();
         }
         
-        if (empty($_SESSION['user']['user_id'])) {
-            header("Location: " . BASE_URL . "login");
+        if ( $_SESSION['user']['role'] !== 'admin') {
+            flash('error', "Accès interdit !");
+            header("Location: " . BASE_URL . "");
             exit();
         }
     }

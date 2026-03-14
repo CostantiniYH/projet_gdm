@@ -4,6 +4,7 @@ use Core\Route;
 
 Route::get('/', 'IndexController@index');
 Route::get("/matiere/{id}", 'IndexController@matiere');
+Route::get("/theme/{id}", 'IndexController@theme');
 
 Route::get('/developpement', 'IndexController@indexdev');
 Route::get('/programmation', 'IndexController@indexProgram');

@@ -17,6 +17,13 @@ class Chapitre extends Model
         return $stmt->fetchAll();
     }
 
+    public function getChapitreById($id) {
+        $stmt = $this->query("SELECT * FROM {$this->table} 
+                              WHERE themes_id = $id
+                              ORDER BY id");
+        return $stmt->fetchAll();
+    }
+
     public function insertChapitre($name, $matiere_id, $theme_id) {
         $stmt = $this->query(
             "INSERT INTO {$this->table} (name, matieres_id, themes_id) VALUES (?, ?, ?)", [

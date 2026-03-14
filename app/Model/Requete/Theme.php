@@ -17,10 +17,19 @@ class Theme extends Model
         return $stmt->fetchAll();
     }
     
-    public function getThemeById($id) {
+    public function getThemeByMatiere($id) {
         $stmt = $this->query(
             "SELECT * FROM {$this->table} 
             WHERE matieres_id = $id 
+            ORDER BY id");
+        return $stmt->fetchAll();
+    }
+
+    
+    public function getThemeById($id) {
+        $stmt = $this->query(
+            "SELECT * FROM {$this->table} 
+            WHERE id = $id 
             ORDER BY id");
         return $stmt->fetchAll();
     }

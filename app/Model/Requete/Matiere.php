@@ -21,7 +21,7 @@ class Matiere extends Model
         $stmt = $this->query("SELECT * FROM $this->table 
                               WHERE id = $id
                               ORDER BY id");
-        return $stmt->fetchAll();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public function insertMatiere($nom) {

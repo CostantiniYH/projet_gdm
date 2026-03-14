@@ -66,7 +66,7 @@ class AuthController
         $result = $this->serviceLogin->loginUser($_POST);
 
         if (!empty($result['errors'])) {
-            $_SESSION['flash']['error'] = $result['errors'];
+            flash('error', $result['errors']);
             header("Location: " . BASE_URL . "login");
             exit;
         }
@@ -89,7 +89,7 @@ class AuthController
         ];
         $_SESSION['logged_in'] = true;
 
-        $_SESSION['flash']['success'] = "Connexion réussi !";
+        flash('success', "Connexion réussi !");
         header("Location: " . BASE_URL . "dashboard");
         exit;
     }
@@ -101,7 +101,7 @@ class AuthController
 
         session_start();
 
-        $_SESSION['flash']['success'] = "Déconnexion réussi !";
+        flash('success', "Déconnexion réussi !");
         header("Location: " . BASE_URL . "login");
         exit;
     }

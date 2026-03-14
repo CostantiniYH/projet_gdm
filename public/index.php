@@ -11,5 +11,10 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
-
+function flash($type, $message) {
+    $_SESSION['flash'] = [
+        'type' => $type,
+        'message' => $message
+    ];
+}
 require dirname(__DIR__) . '/app/init.php';
