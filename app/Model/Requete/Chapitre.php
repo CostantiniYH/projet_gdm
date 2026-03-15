@@ -17,7 +17,7 @@ class Chapitre extends Model
         return $stmt->fetchAll();
     }
 
-    public function getChapitreById($id) {
+    public function getChapitreByThemeId($id) {
         $stmt = $this->query("SELECT * FROM {$this->table} 
                               WHERE themes_id = $id
                               ORDER BY id");

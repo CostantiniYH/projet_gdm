@@ -30,6 +30,7 @@ class IndexController {
 
     // Liste des matières
     public function matieres() {
+        // Navbar + cartes
         $matieres = $this->Matieres->getMatiere();
 
         afficherVue('Accueil', "", "public/matieres", "", "", "", [
@@ -37,29 +38,32 @@ class IndexController {
         ]);
     }
 
-    // Matière sélectionnée : liste des thèmes de la matière slectionnée
-     public function matiere($id) {
-        // Récupérer toutes les matières
+    // Liste des thèmes de la matière slectionnée
+    public function matiere($id) {
+        // Récupérer toutes les matières pour la navbar
         $listMatieres = $this->Matieres->getMatiere();
-        // Identifier la matière correspondante à l'id stocké
+        // Sélectionner la matière correspondante à l'id stocké
+        // dans l'url pour afficher son nom
         $matiere = $this->Matieres->getMatiereById($id);
         // Sélectionner tous les thèmes associés à l'id de la matière
         $themes = $this->Themes->getThemeByMatiereId($id);
 
-        afficherVue($matiere['name'], "/matiere", 'public/themes', "", "", "", [
+        afficherVue($matiere['name'], "/matiere", 'public/themes',
+         "", "", "", [
             'matieres' => $listMatieres,
             'themes' => $themes
         ]);
     }
 
-     // Thème sélectioné : liste des chapitres du thème sélectionné
-     public function theme($id) {
+    // Liste des chapitres du thème sélectionné
+    public function theme($id) {
         // Récupérer toutes les matières pour la navbar ou autre
         $listMatieres = $this->Matieres->getMatiere();
-        // Récupérer la ligne du theme pour l'id et l'utiliser pour le fil d'ariane
+        // Récupérer la ligne du theme à partir de l'id stocké dans l'url
+        // pour le titre et le fil d'ariane
         $themes = $this->Themes->getThemeById($id);
         // Récupérer les lignes de la table chapitres selon le thème
-        $chapitres = $this->Chapitres->getChapitreById($id);
+        $chapitres = $this->Chapitres->getChapitreByThemeId($id);
 
         afficherVue($themes['name'], "", 'public/chapitres', "", "", "", [
             'matieres' => $listMatieres,
