@@ -54,7 +54,7 @@ class AdminController
         $matieres = $this->modelMatiere->getMatiere(); 
         $themes = $this->modelTheme->getTheme();
 
-        if ($_POST == true) {
+        if (!empty($_POST)) {
             $nom = $_POST['matiere'];
             $add_matiere = $this->modelMatiere->insertMatiere($nom);
             return $add_matiere;
@@ -66,7 +66,8 @@ class AdminController
             ]);
     }
 
-    public function edit() {
+    // Ajouter un élément
+    public function create() {
         try {
             if (!empty($_POST['matiere']) && empty($_POST['theme'])) {
                 $nom = $_POST['matiere'] ?? null;
@@ -103,5 +104,22 @@ class AdminController
         }
         header("Location: " . BASE_URL. "forms");
         exit;
+    }
+
+    // Modifier un élément
+    public function edit($id) {
+
+    }
+
+    // Supprimer un élément
+    public function delete($id) {
+        $deleted = $this->modelChapitre->deleteChapitre($id);
+
+        if ($deleted) {
+            flash('info', "Chapitre supprimé");
+            header("Location: " . BASE_URL . "dashboard");
+        } else {
+            flash('error', "Erreur lors de la suppression du chapitre.");
+        }
     }
 }

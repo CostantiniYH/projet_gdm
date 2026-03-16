@@ -30,5 +30,13 @@ class Matiere extends Model
         VALUES (?)", [$nom]);
         return (int) $this->pdo->lastInsertId();
     }
+    
+    // Supprimer une matière avec son ID
+    public function deleteMatière($id) {
+        // Chercher la classe parent Model avec $this et sa méthode query()
+        $stmt = $this->query("DELETE FROM matieres WHERE id = ?", [$id]); 
+        // Si une matière a bien été supprimé (ligne supérieur à zéro), retourner 'true' sinon 'false'
+        return $stmt->rowCount() > 0; 
+    }
 }
 

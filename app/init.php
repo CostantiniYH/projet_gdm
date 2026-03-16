@@ -39,6 +39,13 @@ function slugifyFirstWord($text)
 }
 
 
+function flash($type, $message) {
+    $_SESSION['flash'] = [
+        'type' => $type,
+        'message' => $message
+    ];
+}
+
 require __DIR__ . "/Views/router.view.php";
 
 
