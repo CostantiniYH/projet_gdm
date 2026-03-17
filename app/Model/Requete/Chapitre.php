@@ -28,6 +28,15 @@ class Chapitre extends Model
         return $stmt->fetchAll();
     }
 
+    // Sélectionner un chapitre par son ID (Pratique pour UPDATE et DELETE et autres vérifications)
+    public function getChapitreById($id) {
+        // Chercher la classe parent Model avec $this et sa méthode query()
+        $stmt = $this->query("SELECT * FROM {$this->table} 
+                              WHERE id = $id 
+                              ORDER BY id");
+        return $stmt->fetch();
+    }
+
     // Ajouter un chapitre
     public function insertChapitre($name, $matiere_id, $theme_id) {
         // Chercher la classe parent Model avec $this et sa méthode query()

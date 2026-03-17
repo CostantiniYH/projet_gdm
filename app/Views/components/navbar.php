@@ -37,8 +37,7 @@ use Core\Route;
             Formulaires
           </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item text-black" href="<?= BASE_URL ?>forms">Ajouter</a></li>
-                <li><a class="dropdown-item text-black" href="<?= BASE_URL ?>update">Modifier</a></li>
+                <li><a class="dropdown-item text-black" href="<?= BASE_URL ?>create">Ajouter</a></li>
             </ul>
         </li>
         <?php } elseif (isset(($_SESSION['user'])) && !empty($_SESSION['user']['role'] == 'admin')) { ?>

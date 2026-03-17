@@ -39,7 +39,7 @@ class IndexController {
     }
 
     // Liste des thèmes de la matière slectionnée
-    public function matiere($id) {
+    public function themes($id) {
         // Récupérer toutes les matières pour la navbar
         $listMatieres = $this->Matieres->getMatiere();
         // Sélectionner la matière correspondante à l'id stocké
@@ -56,7 +56,7 @@ class IndexController {
     }
 
     // Liste des chapitres du thème sélectionné
-    public function theme($id) {
+    public function chapitres($id) {
         // Récupérer toutes les matières pour la navbar ou autre
         $listMatieres = $this->Matieres->getMatiere();
         // Récupérer la ligne du theme à partir de l'id stocké dans l'url

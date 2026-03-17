@@ -1,14 +1,15 @@
 <section class="bg-section-1 p-5">
-    <h3 class="text-center text-white">Formulaires d'alimentation BDD</h3>
+    <h3 class="text-center">Formulaires d'alimentation BDD</h3>
 </section>
     <section class="row bg-section-2 p-5">
         <!-- Formulaire d'ajout d'une matière -->
         <div class="col-md">
-            <form class="h-100 shadow-sm bg-white p-5 rounded-1" action="<?= BASE_URL ?>add_matiere" method="post">
+            <form class="h-100 shadow-sm bg-white p-5 rounded-1" action="<?= BASE_URL ?>store-matiere" method="post">
                 <div class="form-group">        
                     <legend class="text-center">Ajouter une matière</legend>
                     <label for="matiere">Matière</label>
-                    <input class="form-control mb-3" type="text" name="matiere" id="matiere" placeholder="Entrer une matière" required>
+                    <input class="form-control mb-3" type="text" name="matiere" id="matiere" 
+                    placeholder="Entrer une matière" value="<?= $matiere['nom'] ?? '' ?>" required>
                     <input class="btn btn-success" type="submit" value="Ajouter">
                 </div>
             </form>
@@ -16,7 +17,7 @@
         
         <!-- Formulaire d'ajout d'un thème -->
         <div class="col-md">
-            <form class="shadow-sm bg-white p-5 rounded-1" action="<?= BASE_URL ?>add_theme" method="post">
+            <form class="shadow-sm bg-white p-5 rounded-1" action="<?= BASE_URL ?>store-theme" method="post">
                 <div class="form-group">        
                     <legend class="text-center">Ajouter un thème</legend>
                     <label for="matiere">Sélectionner une matière</label>
@@ -37,7 +38,7 @@
 
         <!-- Formulaire d'ajout d'un chapitre -->
         <div class="col-md">
-            <form class="shadow-sm bg-white p-5 rounded-1" action="<?= BASE_URL ?>add_chapitre" method="post">
+            <form class="shadow-sm bg-white p-5 rounded-1" action="<?= BASE_URL ?>store-chapitre" method="post">
                 <div class="form-group">        
                     <legend class="text-center">Ajouter un chapitre</legend>
                     <label for="matiere">Sélectionner une matière</label>

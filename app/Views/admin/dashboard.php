@@ -37,7 +37,7 @@
                         </form>
 
                         <!-- Modifier la donnée (crUd) -->
-                        <a href="<?= BASE_URL ?>/edit-matiere/<?= $m['id'] ?>" 
+                        <a href="<?= BASE_URL ?>edit-matiere/<?= $m['id'] ?>" 
                         class="me-2 float-end btn btn-warning bi bi-pencil-fill"></a>
                     </li>
                     <?php endforeach ?>
@@ -68,7 +68,7 @@
                     </form>
 
                     <!-- Modifier la donnée (crUd) -->
-                    <a href="<?= BASE_URL ?>/edit-theme/<?= $t['id'] ?>" 
+                    <a href="<?= BASE_URL ?>edit-theme/<?= $t['id'] ?>" 
                     class="me-2 float-end btn btn-warning bi bi-pencil-fill"></a>
                 </li>
                 <?php endforeach ?>
@@ -100,7 +100,7 @@
                     </form>
 
                     <!-- Modifier la donnée (crUd) -->
-                    <a href="<?= BASE_URL ?>/edit-chapitre/<?= $c['id'] ?>" 
+                    <a href="<?= BASE_URL ?>edit-chapitre/<?= $c['id'] ?>" 
                     class="me-2 float-end btn btn-warning bi bi-pencil-fill"></a>
                 </li>
                 <?php endforeach ?>
