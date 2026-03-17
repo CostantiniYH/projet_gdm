@@ -7,7 +7,7 @@ Route::get('/apropos', 'IndexController@Apropos');
 Route::get('/contact', 'IndexController@contact');
 
 // Liste des matières
-Route::get("/matieres", 'MatiereCntroller@index');
+Route::get("/matieres", 'MatiereController@index');
 
 // Liste des thèmes par matière
 Route::get("/matiere/{id}", 'ThemeController@index');

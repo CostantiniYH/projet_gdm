@@ -8,7 +8,7 @@ use App\Model\Requete\Chapitre;
 use Exception;
 use PDOException;
 
-class AdminController
+class ThemeController
 {
 
     private $modelMatiere;
