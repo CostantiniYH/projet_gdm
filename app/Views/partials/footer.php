@@ -32,11 +32,12 @@
 <footer class="bg-footer">
     <div class="container row p-5">
         <section class="col-md">
-            <h5>Liens utiles</h5>
+            <h5>Blocs principals</h5>
             <ul>
-                <li><a class="nav-link" href="<?= BASE_URL ?>support">Bloc 1- SMDSI</a></li>
-                <li><a class="nav-link" href="<?= BASE_URL ?>slam">Bloc 2 - SLAM</a></li>
-                <li><a class="nav-link" href="<?= BASE_URL ?>cybersecurite">Bloc 3 - Cybersécurité</a></li>
+                <li><a class="nav-link" href="<?= BASE_URL ?>matiere/1">Bloc 1- SMDSI</a></li>
+                <li><a class="nav-link" href="<?= BASE_URL ?>matiere/2">Bloc 2 - SISR</a></li>
+                <li><a class="nav-link" href="<?= BASE_URL ?>matiere/3">Bloc 2 - SLAM</a></li>
+                <li><a class="nav-link" href="<?= BASE_URL ?>matiere/4">Bloc 3 - Cybersécurité</a></li>
             </ul>
         </section>
         <section class="col-md">
@@ -66,6 +67,6 @@
         </section>
     </div>
     <div class="p-4">
-        <p>&copy; <?= date('Y') ?> GDM-SIO YHC - Tout droit réservé</p>
+        <p>&copy; <?= date('Y') ?> CMS-SIO YHC - Tout droit réservé</p>
     </div>
 </footer>

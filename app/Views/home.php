@@ -1,5 +1,6 @@
-<section class="bg-section-home p-5">
-    <h1 class="text-center text-white mb-5">Bienvenue sur  Gestion des matières ou Edu Prime</h1>
+<section class="bg-section-home p-5 text-center text-white">
+    <h1 class="">Bienvenue sur le CMS SIO</h1>
+    <h3>Gestion de contenu de cours</h3>
 </section>  
 
 <div class="bg-marron p-5">
